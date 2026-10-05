@@ -127,3 +127,5 @@ Still to do:
 - [ ] Share the link in a chat app and check the preview image and title
 - [ ] Every proof link opens
 - [ ] Final check from a different device and network before submitting
+
+      
