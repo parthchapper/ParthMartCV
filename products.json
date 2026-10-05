@@ -1,0 +1,157 @@
+{
+  "draft": true,
+
+  "links": {
+    "_help": "Every link on the site lives here. Paste a full web address (https://...) or a file path like proof/my-file.jpg between the quotes. Leave a link empty to hide it.",
+
+    "email": "chapper.parth@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/parth-chapper-2aba45345",
+    "github": "",
+    "video": "",
+    "source-code": "",
+
+    "imo-certificate": "proof/imo-2026-certificate.jpg",
+    "cubesat-datasheet": "proof/satellite-system-datasheet.pdf",
+    "cubesat-boards": "",
+    "cubesat-dashboard": "",
+    "ruya-result": "",
+    "lagrange-repo": "",
+    "lagrange-paper": "",
+    "space-valet-instagram": "",
+    "career-horizons-proof": "",
+    "career-tests-screenshots": "",
+    "stark-shop": "",
+    "stark-sales": "",
+    "mpd-paper": ""
+  },
+
+  "store": {
+    "name": "PARTH MART",
+    "owner": "Parth Chapper",
+    "city": "Dubai, UAE",
+    "builtWith": "Concept and every project fact: Parth. Code, pixel art and first-draft label wording: built with Claude, an AI assistant, from Parth's design brief."
+  },
+
+  "achievements": [
+    { "icon": "star", "value": "IMO 2026", "text": "Represented the UAE at the International Mathematical Olympiad in Shanghai", "proof": "imo-certificate" },
+    { "icon": "checklist", "value": "$100K", "text": "in revenue for My Career Horizons from the career tests I built", "proof": "career-horizons-proof" },
+    { "icon": "printer", "value": "~1,000", "text": "customers and $15K in revenue at Stark 3D, my 3D-printing business", "proof": "stark-shop" },
+    { "icon": "scroll", "value": "5", "text": "research papers. Titles coming soon." }
+  ],
+
+  "featured": "stark-3d",
+
+  "aisles": [
+    { "id": "aerospace", "name": "Aerospace", "color": "#2E4A7D", "icon": "rocket" },
+    { "id": "software", "name": "Software", "color": "#1F6F6F", "icon": "terminal" },
+    { "id": "making", "name": "Making & Business", "color": "#A8452B", "icon": "wrench" },
+    { "id": "research", "name": "Research", "color": "#6B4C8A", "icon": "flask" }
+  ],
+
+  "products": [
+    {
+      "id": "cubesat",
+      "aisle": "aerospace",
+      "icon": "satellite",
+      "name": "Algae-watch CubeSat",
+      "oneLine": "A small satellite designed to give UAE desalination plants early warning of harmful algal blooms.",
+      "headline": { "value": "2nd", "label": "place, RUYA Space Race 2026" },
+      "hours": null,
+      "madeBy": "Parth leads the team and designed the avionics: a two-processor flight computer, the power system and attitude control.",
+      "ingredients": ["ESP32-S3 flight computer", "Raspberry Pi Pico data processor", "SX1280 2.4 GHz radio", "MPU-6500 IMU", "INA219 power monitor", "3 reaction wheels + 3 magnetorquers", "Python"],
+      "facts": [
+        { "label": "RUYA Space Race 2026", "value": "2nd place", "proof": "ruya-result" },
+        { "label": "Processors that cover for each other if one fails", "value": "2", "proof": "cubesat-datasheet" },
+        { "label": "Avionics boards (data handling, power, attitude control)", "value": "3", "proof": "cubesat-boards" },
+        { "label": "Mission control dashboard", "value": "Built", "proof": "cubesat-dashboard" }
+      ],
+      "status": "ongoing",
+      "statusNote": "In design: a 1U technology demonstrator first, then a 2–4U operational satellite.",
+      "bestBefore": "Turning the satellite into a business, as the RUYA judges suggested."
+    },
+    {
+      "id": "lagrange",
+      "aisle": "software",
+      "icon": "orbit",
+      "name": "Artificial Lagrange Points",
+      "oneLine": "A Python desktop app that finds where a spacecraft can hold position in the Earth–Moon system with the least continuous thrust.",
+      "headline": { "text": "Public code on GitHub, technical paper submitted" },
+      "hours": null,
+      "madeBy": "Parth wrote the app and worked out the maths behind it.",
+      "ingredients": ["Python", "Earth–Moon circular restricted three-body problem (CR3BP)", "Continuous-thrust equilibria"],
+      "facts": [
+        { "label": "Code", "value": "Public on GitHub", "proof": "lagrange-repo" },
+        { "label": "Technical paper", "value": "Submitted", "proof": "lagrange-paper" },
+        { "label": "Model", "value": "Earth–Moon CR3BP" }
+      ],
+      "status": "shipped",
+      "statusNote": "The app and its code are public.",
+      "bestBefore": "A public launch through the @space.valet Instagram account."
+    },
+    {
+      "id": "career-test",
+      "aisle": "software",
+      "icon": "checklist",
+      "name": "RIASEC & OCEAN career tests",
+      "oneLine": "Career-interest and personality tests I built for My Career Horizons, a company that sells counselling to students and schools.",
+      "headline": { "value": "$100K", "label": "in revenue for the client" },
+      "hours": null,
+      "madeBy": "Parth built both tests for My Career Horizons.",
+      "ingredients": ["RIASEC (Holland code) career-interest model", "OCEAN (Big Five) personality model"],
+      "facts": [
+        { "label": "Revenue the tests brought My Career Horizons", "value": "$100K", "proof": "career-horizons-proof" },
+        { "label": "People who have taken the tests", "value": "1,000+", "proof": "career-tests-screenshots" },
+        { "label": "Tests built (career interests, personality)", "value": "2", "proof": "career-tests-screenshots" }
+      ],
+      "status": "shipped",
+      "statusNote": "",
+      "bestBefore": ""
+    },
+    {
+      "id": "stark-3d",
+      "aisle": "making",
+      "icon": "printer",
+      "name": "Stark 3D Printing",
+      "oneLine": "My 3D-printing business: custom engineering parts for businesses, plus ready-made products like fidget toys.",
+      "headline": { "value": "~1,000", "label": "customers in about two years" },
+      "hours": null,
+      "madeBy": "Parth is the sole CAD and technical lead in a two-person team.",
+      "ingredients": ["CAD", "PLA for quick models", "PETG for high-strength parts", "Word-of-mouth marketing"],
+      "facts": [
+        { "label": "Revenue", "value": "$15,000", "proof": "stark-sales" },
+        { "label": "Customers", "value": "~1,000", "proof": "stark-shop" },
+        { "label": "External business clients", "value": "~100" },
+        { "label": "Years running", "value": "~2" },
+        { "label": "Team", "value": "2 people" }
+      ],
+      "status": "ongoing",
+      "statusNote": "Grown through word of mouth and school marketing channels.",
+      "bestBefore": ""
+    },
+    {
+      "id": "mpd-thruster",
+      "aisle": "research",
+      "icon": "thruster",
+      "name": "Fusion-choke MPD thruster",
+      "oneLine": "A conference paper proposing a deep-space engine that combines pulsed Z-pinch fusion with liquid-gallium propellant.",
+      "headline": { "text": "Paper for IAC 2026, the International Astronautical Congress" },
+      "hours": null,
+      "madeBy": "Parth developed the concept and the physics derivations.",
+      "ingredients": ["Applied-field magnetoplasmadynamic (MPD) thruster", "Pulsed Z-pinch fusion", "Liquid gallium propellant", "Lawson criterion, magnetic confinement and energy-balance derivations"],
+      "facts": [
+        { "label": "Written for", "value": "IAC 2026", "proof": "mpd-paper" },
+        { "label": "Propellant", "value": "Liquid gallium" }
+      ],
+      "status": "ongoing",
+      "statusNote": "",
+      "bestBefore": ""
+    }
+  ],
+
+  "preorders": [
+    { "id": "cubesat-business", "icon": "satellite", "item": "Turning the CubeSat into a business", "note": "Advice from the RUYA Space Race judges.", "ships": "", "link": "" },
+    { "id": "lagrange-launch", "icon": "orbit", "item": "Public launch of Artificial Lagrange Points", "note": "Coming to Instagram through @space.valet.", "ships": "", "link": "space-valet-instagram" },
+    { "id": "spaceops-papers", "icon": "scroll", "item": "Three aerospace papers for SpaceOps 2027", "note": "", "ships": "", "link": "" },
+    { "id": "full-time-building", "icon": "rocket", "item": "A year of full-time building", "note": "", "ships": "September 2027", "link": "" }
+  ]
+}

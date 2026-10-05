@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Checkout · Parth Mart</title>
+  <meta name="description" content="Your Parth Mart receipt: every project Parth Chapper has built, sorted by the hours he spent on it.">
+  <meta name="theme-color" content="#F4EBD9">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Link previews. Once your domain works, replace YOUR-DOMAIN below (two places). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Checkout at Parth Mart">
+  <meta property="og:description" content="Every project Parth Chapper has built, on one receipt.">
+  <meta property="og:url" content="https://YOUR-DOMAIN/checkout.html">
+  <meta property="og:image" content="https://YOUR-DOMAIN/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="fonts/press-start-2p-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/libre-franklin-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="products.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="checkout.js"></script>
+</head>
+<body class="checkout-page">
+  <a class="skip-link" href="#receipt">Skip to the receipt</a>
+
+  <header class="topbar">
+    <a class="topbar-sign" href="index.html">Parth Mart</a>
+    <span class="draft-badge" id="draftBadge" hidden>Draft</span>
+    <nav class="topbar-tools" aria-label="Store tools">
+      <a class="tool" href="index.html#aisles" aria-label="Back to the aisles">
+        <span class="tool-icon" data-icon="back"></span><span class="tool-label">Back to the aisles</span>
+      </a>
+      <button type="button" class="tool" id="soundToggle" aria-pressed="true" aria-label="Sound">
+        <span class="tool-icon" data-icon="soundOn"></span><span class="tool-label" aria-hidden="true">Sound on</span>
+      </button>
+      <a class="tool tool-cart" id="cartButton" href="checkout.html" aria-current="page" aria-label="Cart. You are at checkout">
+        <span class="tool-icon" data-icon="cart"></span><span class="tool-label" aria-hidden="true">Cart</span>
+        <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="till-floor" id="main">
+    <div class="till-inner">
+      <h1 class="section-sign section-sign-ink">Checkout</h1>
+      <div class="lane">
+        <div class="till">
+          <p class="bubble" id="bubble">Hi, I'm Parth.</p>
+          <div class="till-art" aria-hidden="true">
+            <div class="cashier" id="cashier"></div>
+            <div class="counter">
+              <div class="register" id="register"></div>
+              <div class="belt"></div>
+            </div>
+            <div class="till-shopper" id="tillShopper"></div>
+          </div>
+        </div>
+        <div class="receipt" id="receipt" tabindex="-1" role="region" aria-label="Your receipt">
+          <p class="loading">Printing your receipt…</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="store-notice">
+    <div class="notice-card">
+      <h2 class="notice-title">How this store was built</h2>
+      <p id="builtWith">Plain HTML, CSS and JavaScript, with every product listed in one data file.</p>
+      <p class="notice-small" id="repoLine"></p>
+    </div>
+  </footer>
+
+  <p class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></p>
+
+  <dialog class="label-dialog" id="labelDialog" aria-labelledby="labelName">
+    <article class="label" id="labelBody"></article>
+  </dialog>
+
+  <noscript>
+    <p class="noscript">The receipt needs JavaScript. Turn it on to see Parth's projects.</p>
+  </noscript>
+</body>
+</html>

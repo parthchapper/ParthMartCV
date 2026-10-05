@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Parth Mart</title>
+  <meta name="description" content="Parth Chapper is building a CubeSat, orbital-mechanics software and a 3D-printing business. Browse his projects as products in a pixel supermarket.">
+  <meta name="theme-color" content="#F4EBD9">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Link previews. Once your domain works, replace YOUR-DOMAIN below (two places). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Parth Mart: what Parth Chapper builds">
+  <meta property="og:description" content="A CubeSat, orbital-mechanics software and a 3D-printing business, shelved as products in a pixel supermarket.">
+  <meta property="og:url" content="https://YOUR-DOMAIN/">
+  <meta property="og:image" content="https://YOUR-DOMAIN/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Parth Mart storefront sign above the name Parth Chapper">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="fonts/press-start-2p-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/libre-franklin-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="products.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="store.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#aisles">Skip to the aisles</a>
+
+  <header class="topbar">
+    <a class="topbar-sign" href="index.html">Parth Mart</a>
+    <span class="draft-badge" id="draftBadge" hidden>Draft</span>
+    <nav class="topbar-tools" aria-label="Store tools">
+      <button type="button" class="tool" id="viewToggle" aria-pressed="false" aria-label="List view">
+        <span class="tool-icon" data-icon="list"></span><span class="tool-label">List view</span>
+      </button>
+      <button type="button" class="tool" id="soundToggle" aria-pressed="true" aria-label="Sound">
+        <span class="tool-icon" data-icon="soundOn"></span><span class="tool-label" aria-hidden="true">Sound on</span>
+      </button>
+      <a class="tool tool-cart" id="cartButton" href="checkout.html" aria-label="Cart. Go to checkout">
+        <span class="tool-icon" data-icon="cart"></span><span class="tool-label" aria-hidden="true">Cart</span>
+        <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <section class="highlights" id="highlights" aria-labelledby="highlightsTitle">
+    <h2 class="sr-only" id="highlightsTitle">Highlights</h2>
+    <div class="ticker">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+    <button type="button" class="ticker-toggle" id="tickerToggle" aria-pressed="false"><span class="sr-only">Pause the rolling highlights</span></button>
+  </section>
+
+  <main id="main">
+    <section class="storefront" id="entrance" aria-labelledby="ownerName">
+      <div class="fascia">
+        <p class="store-sign" id="storeSign">PARTH MART</p>
+      </div>
+      <div class="awning" aria-hidden="true"></div>
+      <div class="window">
+        <div class="window-copy">
+          <h1 class="owner" id="ownerName">Parth Chapper</h1>
+          <p class="tagline">Building a CubeSat, <span class="nowrap">orbital-mechanics</span> software and a <span class="nowrap">3D-printing</span> business.</p>
+          <div class="entrance-actions">
+            <button type="button" class="btn btn-go" id="startShopping">Start shopping</button>
+            <button type="button" class="btn btn-go-outline" id="expressCheckout" data-action="express">Express checkout</button>
+          </div>
+          <p class="entrance-hint">Express checkout prints every product on one receipt, with no browsing.</p>
+          <p class="entrance-video" id="videoLink" hidden></p>
+        </div>
+        <aside class="endcap" aria-labelledby="endcapTitle">
+          <h2 class="endcap-sign" id="endcapTitle">Featured</h2>
+          <div class="endcap-slot" id="endcapSlot"></div>
+          <div class="endcap-base" aria-hidden="true"></div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="floor-wrap">
+      <div class="floor" id="floor">
+        <div class="walkway" aria-hidden="true">
+          <div class="doors" id="doors"><span class="door door-left"></span><span class="door door-right"></span></div>
+          <div class="mat"></div>
+        </div>
+        <div class="shopper" id="shopper" aria-hidden="true"></div>
+        <div class="aisles" id="aisles" tabindex="-1" aria-label="Aisles">
+          <p class="loading">Stocking the shelves…</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="preorder" id="preorder" aria-labelledby="preorderTitle">
+      <div class="preorder-inner">
+        <h2 class="preorder-sign" id="preorderTitle">Pre-order now</h2>
+        <p class="preorder-sub">What's coming next. Pre-order anything you'd like to see, and it goes on your receipt.</p>
+        <ul class="preorder-grid" id="preorderGrid" role="list"></ul>
+        <div class="tills">
+          <div>
+            <p class="tills-title">Done shopping?</p>
+            <p class="tills-text" id="tillsText">Your basket is waiting at the till.</p>
+          </div>
+          <a class="btn btn-go" href="checkout.html">Go to checkout</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="store-notice">
+    <div class="notice-card">
+      <h2 class="notice-title">How this store was built</h2>
+      <p id="builtWith">Plain HTML, CSS and JavaScript, with every product listed in one data file.</p>
+      <p class="notice-small" id="repoLine"></p>
+    </div>
+  </footer>
+
+  <p class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></p>
+
+  <dialog class="label-dialog" id="labelDialog" aria-labelledby="labelName">
+    <article class="label" id="labelBody"></article>
+  </dialog>
+
+  <noscript>
+    <p class="noscript">This store needs JavaScript to stock its shelves. Turn it on to see Parth's projects.</p>
+  </noscript>
+</body>
+</html>
